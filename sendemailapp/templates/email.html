@@ -1,0 +1,9 @@
+<!-- templates/email.html -->
+<h1>Contact Us</h1>
+<form method="post">
+    {% csrf_token %}
+    {% block raw %}{{ form.as_p }}{% endblock %}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
